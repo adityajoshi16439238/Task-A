@@ -1,4 +1,4 @@
-# ANN example: NYC yellow taxi fare regression
+#Task A : NYC yellow taxi fare regression
 
 This repository is a small end-to-end example: download **NYC TLC** trip data in **Parquet** format, optionally merge monthly files per fleet type, and train a **PyTorch** feedforward network to predict **yellow taxi** `fare_amount` from trip features—with preprocessing (imputation, scaling, feature selection, optional PCA), **dropout**, **weight decay**, **learning-rate decay**, and **early stopping**.
 
