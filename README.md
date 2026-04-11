@@ -21,8 +21,8 @@ Trip data is published by the [NYC Taxi & Limousine Commission](https://www.nyc.
 ## Setup
 
 ```bash
-git clone https://github.com/rohankilledar/ANN_example_1.git
-cd ANN_example_1
+git clone https://github.com/adityajoshi16439238/Task-A.git
+cd Task A
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -65,7 +65,7 @@ Each notebook looks for **`dataset_nyc_parquet/combined/yellow_all.parquet`**, o
 ## Project layout
 
 ```
-ANN_example_1/
+Task A/
 ├── README.md
 ├── requirements.txt
 ├── docs/
