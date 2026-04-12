@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 """
-Download monthly NYC TLC trip Parquet files from CloudFront.
+Download monthly NYC TLC yellow taxi trip Parquet files from CloudFront.
 
 Source index: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-Only yellow and green taxis have files for every month in the catalog; FHV and
-HVFHV appear for subsets of months/years. This script probes each URL and skips
+This script only downloads yellow taxi files. It probes each URL and skips
 missing objects (CloudFront often returns 403 for absent keys).
 
 Example:
   python scripts/download_nyc_tlc_parquet.py --start-year 2023 --end-year 2025
-  python scripts/download_nyc_tlc_parquet.py --start-year 2009 --end-year 2026 --types yellow green
 """
 
 from __future__ import annotations
@@ -30,9 +28,6 @@ BASE = "https://d37ci6vzurychx.cloudfront.net/trip-data"
 
 TYPE_PREFIX = {
     "yellow": "yellow",
-    "green": "green",
-    "fhv": "fhv",
-    "fhvhv": "fhvhv",
 }
 
 SESSION = requests.Session()
@@ -98,8 +93,8 @@ def main() -> int:
         "--types",
         nargs="+",
         choices=list(TYPE_PREFIX),
-        default=list(TYPE_PREFIX),
-        help="Which datasets to try (default: all four)",
+        default=["yellow"],
+        help="Which datasets to try (default: yellow)",
     )
     p.set_defaults(skip_existing=True)
     p.add_argument(
