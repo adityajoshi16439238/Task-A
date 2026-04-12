@@ -75,8 +75,7 @@ Task A/
 │   └── combine_nyc_tlc_parquet.py
 ├── notebooks/
 │   ├── yellow_taxi_fare_ann_pytorch.ipynb
-│   ├── yellow_taxi_fare_cv_pytorch.ipynb
-│   └── taxi_fare_ann_individual_lab.ipynb
+│   └── yellow_taxi_fare_cv_pytorch.ipynb
 └── dataset_nyc_parquet/     # created locally; not committed
 ```
 
