@@ -179,6 +179,3 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
-
-# NYC TLC parquet downloads (large; do not commit)
-dataset_nyc_parquet/
