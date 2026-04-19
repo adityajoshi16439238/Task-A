@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ## Download TLC Parquet data
 
-Files land under **`dataset_nyc_parquet/`** (ignored by Git). Re-runs skip re-download when local file size matches the server’s `Content-Length` unless you pass **`--no-skip-existing`**.
+Files land under **`dataset_nyc_parquet/`** yellow_tripdata_2021-01.parquet`**.
 
 
 ## Run the notebooks
@@ -37,7 +37,7 @@ jupyter notebook notebooks/yellow_taxi_fare_ann_pytorch.ipynb
 jupyter notebook notebooks/yellow_taxi_fare_cv_pytorch.ipynb
 ```
 
-Each notebook looks for **`dataset_nyc_parquet/combined/yellow_all.parquet`**, or otherwise **`dataset_nyc_parquet/yellow/`**. Use `MAX_ROWS` to cap rows for faster runs. The CV notebook trains **K** models (default 5); reduce `N_SPLITS` or `MAX_ROWS` if it is too slow.
+ Use `MAX_ROWS` to cap rows for faster runs. The CV notebook trains **K** models (default 5); reduce `N_SPLITS` or `MAX_ROWS` if it is too slow.
 
 ## Project layout
 
